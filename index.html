@@ -61,8 +61,8 @@
     <body class="bg-sbb-grayBg text-slate-800 font-sans min-h-screen flex flex-col">
 
         <!-- Header -->
-        <header class="bg-sbb-red text-white sticky top-0 z-40">
-            <div class="mx-auto p-4 flex items-center justify-between h-16">
+        <header class="bg-sbb-red text-white fixed top-0 left-0 w-full z-50 shadow-md">
+            <div class="mx-auto p-4 flex items-center justify-between h-16 ">
                 <div class="flex items-center space-x-4">
                     <img src="img/SBB-icon.svg" alt="SBB ICON" class="h-8" />
                     <div class="flex flex-col">
@@ -70,22 +70,43 @@
                         <p class="text-xs">Das SBB Zufalls-Bahnabenteuer</p>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <button onclick="toggleModal('rules-modal')" class="bg-white/40 hover:bg-white/60 text-white text-xs px-4 py-2 rounded-lg transition ">
+
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-white focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <button onclick="toggleModal('rules-modal')" class="bg-white/40 hover:bg-white/60 text-white text-xs px-4 py-2 rounded-lg transition">
                         Anleitung
                     </button>
-                    <button onclick="confirmReset()" class="bg-white/40 hover:bg-white/60 text-white text-xs px-4 py-2 rounded-lg transition ">
+                    <button onclick="confirmReset()" class="bg-white/40 hover:bg-white/60 text-white text-xs px-4 py-2 rounded-lg transition">
                         Reset
                     </button>
-                    <button onclick="generateExportLink()" class="bg-white/40 hover:bg-white/60 text-white text-xs px-4 py-2 rounded-lg transition ">
+                    <button onclick="generateExportLink()" class="bg-white/40 hover:bg-white/60 text-white text-xs px-4 py-2 rounded-lg transition">
                         Reise als Link teilen
                     </button>
                 </div>
             </div>
+
+            <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-sbb-red border-t border-white/20 px-4 py-2 space-y-2 pb-4 shadow-lg z-50">
+                <button onclick="toggleModal('rules-modal'); toggleMobileMenu()" class="block w-full text-left bg-white/20 hover:bg-white/40 text-white text-sm px-4 py-2 rounded-lg transition">
+                    Anleitung
+                </button>
+                <button onclick="confirmReset(); toggleMobileMenu()" class="block w-full text-left bg-white/20 hover:bg-white/40 text-white text-sm px-4 py-2 rounded-lg transition">
+                    Reset
+                </button>
+                <button onclick="generateExportLink(); toggleMobileMenu()" class="block w-full text-left bg-white/20 hover:bg-white/40 text-white text-sm px-4 py-2 rounded-lg transition">
+                    Reise als Link teilen
+                </button>
+            </div>
         </header>
 
         <!-- Main Container -->
-        <main class="flex-grow max-w-7xl w-full mx-auto p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <main class="flex-grow max-w-7xl w-full mx-auto p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 pt-24">
 
             <!-- LEFT SIDE: Game flow & actions (7 cols) -->
             <div class="lg:col-span-7 flex flex-col space-y-6">
