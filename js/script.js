@@ -1174,6 +1174,7 @@ function executeReset() {
 }
 
 
+// Funktion für das ausklappbare Handy-Menü
 function toggleMobileMenu() {
     const menu = document.getElementById('mobile-menu');
     if (menu) {
