@@ -502,7 +502,7 @@ function rollForTrain() {
     if (rollerBtn) {
         rollerBtn.disabled = true;
         const btnText = document.getElementById('btn-roll-train-text');
-        if (btnText) btnText.innerText = "🎲 Würfle...";
+        if (btnText) btnText.innerText = "Würfle...";
     }
 
     const container = document.getElementById('dice-display-container');
@@ -568,7 +568,7 @@ function rollForTrain() {
             if (rollerBtn) {
                 rollerBtn.disabled = false;
                 const btnText = document.getElementById('btn-roll-train-text');
-                if (btnText) btnText.innerText = "🎲 Zug erwürfeln";
+                if (btnText) btnText.innerText = "Zug erwürfeln";
             }
         }, 1500);
 
