@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Schiebt den Karten-Behälter in den Hintergrund */
+#map {
+    z-index: 1 !important;
+}
+
+/* Falls Ihre Popups oder Modals überlagert werden, 
+   geben wir diesen einen höheren Wert */
+.fixed,
+.z-50 {
+    z-index: 9999 !important;
+}
