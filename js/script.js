@@ -1172,12 +1172,3 @@ function executeReset() {
     // Query position again
     geolocate();
 }
-
-
-// Funktion für das ausklappbare Handy-Menü
-function toggleMobileMenu() {
-    const menu = document.getElementById('mobile-menu');
-    if (menu) {
-        menu.classList.toggle('hidden');
-    }
-}
