@@ -1,0 +1,59 @@
+<div class="no-copy bg-red-600 text-white sticky top-0 z-50 shadow-sm">
+    <div class="mx-auto px-4 flex h-16 items-center justify-between">
+        <a href="/" class=" flex items-center gap-1">
+            <img class="h-12 w-auto" src="img/logo-track-dice.svg" alt="Logo">
+
+            <div class=" show-logged-out flex flex-col justify-center">
+                <h1 data-key="header.title" class="text-xl/5 font-bold">Gleiswürfeln</h1>
+                <p data-key="header.subtitle" class="text-xs/5 ">Dein Zufallsabenteuer auf der Schiene</p>
+            </div>
+            <div class=" show-logged-in hidden lg:flex flex-col justify-center">
+                <h1 data-key="header.title" class="text-xl/5 font-bold">Gleiswürfeln</h1>
+                <p data-key="header.subtitle" class="text-xs/5 ">Dein Zufallsabenteuer auf der Schiene</p>
+            </div>
+
+        </a>
+        <div class="flex items-center gap-4">
+            <nav class="hidden md:block flex items-center space-x-4 text-sm show-logged-in">
+
+                <a class=" text-white/80 hover:text-white/100 transition" href="/">HOME</a>
+                <a class=" text-white/80 hover:text-white/100 transition" href="voluntary">VOLUNTARY WORK</a>
+                <a class=" text-white/80 hover:text-white/100 transition" href="work">WORK</a>
+                <a class=" text-white/80 hover:text-white/100 transition" href="projects">PROJECTS</a>
+                <a class=" text-white/80 hover:text-white/100 transition" href="about">ABOUT ME</a>
+            </nav>
+            <div class=" flex items-center gap-4">
+                <a data-key="header.login" id="loginNavBtn" class=" bg-white/40 hover:bg-white/60 text-white  rounded-sm px-5 py-2.5 text-sm font-medium transition" href="#">
+                    LOGIN
+                </a>
+
+                <button id="themeToggle" class="block bg-white/40 hover:bg-white/60 text-white text-gray-950 p-2 rounded-sm transition ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hidden dark:block">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 block dark:hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+
+                <button id="mobileMenuToggle" class="md:hidden block bg-white/40 hover:bg-white/60 text-white text-gray-950 p-2 rounded-sm transition show-logged-in">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 burger-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 close-icon hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden absolute left-0 right-0 top-16 bg-red-600 z-50 shadow-md space-y-2 p-4 text-sm show-logged-in">
+
+        <a class="text-white/80 hover:text-white/100 hover:bg-white/20 block rounded-sm px-4 py-2" href="/">HOME</a>
+        <a class="text-white/80 hover:text-white/100 hover:bg-white/20 block rounded-sm px-4 py-2" href="work">WORK</a>
+        <a class="text-white/80 hover:text-white/100 hover:bg-white/20 block rounded-sm px-4 py-2" href="voluntary">VOLUNTARY WORK</a>
+        <a class="text-white/80 hover:text-white/100 hover:bg-white/20 block rounded-sm px-4 py-2" href="projects">PROJECTS</a>
+        <a class="text-white/80 hover:text-white/100 hover:bg-white/20 block rounded-sm px-4 py-2" href="about">ABOUT ME</a>
+    </div>
+</div>

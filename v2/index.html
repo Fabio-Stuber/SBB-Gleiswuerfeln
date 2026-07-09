@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="scroll-smooth no-copy" lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title data-key="index.meta.title">Roll the Track Dice - Your Random Train Adventure</title>
+        <meta name="index.meta.description" data-key="meta_description" content="Experience a thrilling random adventure with the Track Dice!" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.fabio-stuber.com/" />
+
+        <link rel="alternate" hreflang="de" href="https://www.fabio-stuber.com/" />
+        <link rel="alternate" hreflang="en" href="https://www.fabio-stuber.com/?lang=en" />
+        <link rel="alternate" hreflang="fr" href="https://www.fabio-stuber.com/?lang=fr" />
+        <link rel="alternate" hreflang="it" href="https://www.fabio-stuber.com/?lang=it" />
+        <link rel="alternate" hreflang="x-default" href="https://www.fabio-stuber.com/?lang=en" />
+
+        <link rel="icon" type="image/svg+xml" href="img/logo-track-dice.svg" />
+
+        <meta property=" og:type" content="website" />
+        <meta property="og:title" data-key="index.meta.title" content="Roll the Track Dice - Your Random Train Adventure" />
+        <meta property="og:description" data-key="index.meta.description" content="Experience a thrilling random adventure with the Track Dice!" />
+        <meta property="og:url" content="https://www.fabio-stuber.com/" />
+        <meta property="og:image" content="https://www.fabio-stuber.com/img/Background-FabioStuber.jpg" />
+        <meta property="og:locale" data-key="meta_locale" content="de_CH" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @custom-variant dark (&:where(.dark, .dark *));
+
+            @theme {
+            --font-sans: 'Maven Pro', sans-serif;
+        }
+    </style>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="font-sans flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
+        <!-- navigation -->
+        <header id="header"></header>
+        <!-- main content -->
+
+        <main class="grow show-logged-out">
+            <section class="no-copy relative min-h-[calc(100dvh-14rem)] sm:min-h-[calc(100dvh-10rem)] flex items-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img id="hero-bg" src="img/track-dice.jpg" alt="Hintergrund" class="w-full h-full object-cover object-[85%_center] md:object-right opacity-50 dark:opacity-50">
+                </div>
+
+
+                <div class="relative z-10 p-8 mx-auto w-full max-w-7xl text-white">
+                    <section class="shadow-md bg-white/50 dark:bg-gray-800/50 rounded-xl p-8 space-y-4 backdrop-blur-md max-w-xl">
+                        <h1 data-key="index.meta.title" class="text-4xl font-bold text-red-600 dark:text-white uppercase">start Your <br> Random Train Adventure</h1>
+                        <p class="text-sm text-gray-900 dark:text-white text-pretty  text-justify">
+                            Ready for a new adventure on the rails? In Roll the Track Dice, the dice alone determine the route of your train. Grab the dice and get started right away: Start Your Random Train Adventure! </p>
+
+                        <div class="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full">
+                            <a href="#" id="loginNavBtn" class="w-full text-center bg-red-600 hover:bg-red-700 text-white rounded-sm px-5 py-2.5 text-sm font-medium transition">Sign in to Track Dice
+                            </a>
+                            <a href="#" id="signupNavBtn" class="w-full text-center bg-gray-600 hover:bg-gray-700 text-white rounded-sm px-5 py-2.5 text-sm font-medium transition ">Create an Account</a>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+
+        </main>
+
+        <main class="flex-grow max-w-7xl w-full mx-auto pt-8 pb-8 px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 show-logged-in">
+
+            <div class="lg:col-span-8">
+                <section class="bg-white dark:bg-gray-700 rounded-xl p-8">
+
+                    <div class="z-10 space-y-8">
+                        <div>
+                            <span class="text-sm font-bold st text-red-500 dark:text-red-400 uppercase">Über mich</span>
+                            <h2 class="text-2xl md:text-4xl font-black  text-gray-800 dark:text-white uppercase">Hi, ich bin Fabio<span class="text-red-500 dark:text-red-400">!</span></h2>
+                        </div>
+
+                        <p class="text-base text-gray-600 dark:text-gray-400  text-justify">
+                            Schön, dass du den Weg zu mir gefunden hast. Ich bin dein Spezialist für alles, was mit visueller Kommunikation und digitaler Gestaltung zu tun hat. Ich liebe es, Ideen in die Tat umzusetzen und digitale Erlebnisse zu schaffen, die hängen bleiben. Meine Welt dreht
+                            sich um alles, was Augen und Sinne
+                            anspricht: starke Designs, verständliche Webseiten und die visuelle Aufbereitung von Inhalten. Ich bin fest davon überzeugt, dass gutes Design kein Luxus ist, sondern branchenübergreifend den feinen Unterschied ausmacht.
+                        </p>
+
+                        <div class="pt-2">
+                            <a href="about" class="inline-flex items-center gap-2 text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 font-bold uppercase  text-sm group/link ">
+                                Mehr über mich erfahren
+                                <span class="inline-block  duration-300 group-hover/link:translate-x-2 text-lg leading-none">➔</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            </div>
+            <div class="lg:col-span-4"></div>
+
+        </main>
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+
+        <!-- cookie banner -->
+        <div id="cookieBanner"></div>
+
+        <!-- Modals -->
+        <div id="loginModalContainer"></div>
+        <div id="signupModalContainer"></div>
+
+        <!-- Scripts -->
+        <script type="module" src="js/firebase/firebase-auth.js"></script>
+        <script src="js/translation.js"></script>
+        <script src="js/page-elements.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

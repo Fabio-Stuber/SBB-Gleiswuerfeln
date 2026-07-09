@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="scroll-smooth no-copy" lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title data-key="account.meta.title">Account | Roll the Track Dice</title>
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://www.fabio-stuber.com/" />
+
+        <link rel="alternate" hreflang="de" href="https://www.fabio-stuber.com/" />
+        <link rel="alternate" hreflang="en" href="https://www.fabio-stuber.com/?lang=en" />
+        <link rel="alternate" hreflang="fr" href="https://www.fabio-stuber.com/?lang=fr" />
+        <link rel="alternate" hreflang="it" href="https://www.fabio-stuber.com/?lang=it" />
+        <link rel="alternate" hreflang="x-default" href="https://www.fabio-stuber.com/?lang=en" />
+
+        <link rel="icon" type="image/svg+xml" href="img/logo-track-dice.svg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @custom-variant dark (&:where(.dark, .dark *));
+
+            @theme {
+            --font-sans: 'Maven Pro', sans-serif;
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="font-sans flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900">
+
+        <!-- navigation -->
+        <header id="header"></header>
+
+        <!-- main content -->
+        <main class="flex-grow max-w-7xl w-full mx-auto pt-8 pb-8 px-4 space-y-8">
+
+            <section class="">
+                <h1 data-key="account.title" class="text-4xl font-bold text-red-600 dark:text-white uppercase">USER ACCOUNT</h1>
+            </section>
+
+            <div class="flex flex-col lg:grid lg:grid-cols-12 gap-8">
+
+                <section class="order-1 lg:col-span-4 shadow-md bg-white dark:bg-gray-800 rounded-xl p-8 space-y-4">
+                    <div class="relative w-32 h-32 mx-auto group">
+                        <img id="profilePreview" src="" alt="Profile Picture" class="w-full h-full object-cover rounded-full border-2 border-red-600" />
+                        <label for="avatarUpload" class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-white text-xs font-medium">
+                            <span data-key="account.upload_image">Upload new Image</span>
+                        </label>
+                        <input type="file" id="avatarUpload" accept="image/*" class="hidden" />
+                    </div>
+                    <div>
+                        <h3 id="profileHeaderName" class="text-center text-xl text-gray-900 dark:text-white font-bold"></h3>
+                        <p id="profileHeaderEmail" class="text-center text-sm text-gray-900 dark:text-white"></p>
+                    </div>
+                </section>
+
+                <div class="order-2 lg:col-span-8 lg:row-span-3 space-y-6">
+                    <section class="shadow-md bg-white dark:bg-gray-800 rounded-xl p-8 space-y-4">
+                        <h2 data-key="account.edit.title" class="text-2xl font-bold text-gray-900 dark:text-white mb-6 uppercase">Edit Account</h2>
+
+                        <form id="profileForm" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label data-key="account.edit.firstname" class="block text-sm font-medium text-red-600 dark:text-white mb-1">Firstname</label>
+                                    <input type="text" id="profileFirstName" required
+                                        class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100" />
+                                </div>
+                                <div>
+                                    <label data-key="account.edit.lastname" class="block text-sm font-medium text-red-600 dark:text-white mb-1">Lastname</label>
+                                    <input type="text" id="profileLastName" required
+                                        class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label data-key="account.edit.displayname" class="block text-sm font-medium text-red-600 dark:text-white mb-1">Display Name</label>
+                                <input type="text" id="profileDisplayName" required
+                                    class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100" />
+                            </div>
+
+                            <div>
+                                <label data-key="account.edit.email" class="block text-sm font-medium text-red-600 dark:text-white mb-1">Email address</label>
+                                <input type="email" id="profileEmail" disabled
+                                    class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100 cursor-not-allowed" />
+                            </div>
+
+                            <div>
+                                <label data-key="account.edit.language" class="block text-sm font-medium text-red-600 dark:text-white mb-1">Language</label>
+                                <select id="profileLanguage" class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100">
+                                    <option value="de">Deutsch</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label data-key="account.edit.sbbpass" class="block text-sm font-medium text-red-600 dark:text-white mb-1">SBB Pass</label>
+                                <select id="profileSbbTarif" class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100">
+                                    <option data-key="account.edit.sbbpass1" value="none">No Travelcard</option>
+                                    <option data-key="account.edit.sbbpass2" value="halbtax">Half Fare Travelcard (1/2)</option>
+                                    <option data-key="account.edit.sbbpass3" value="ga">GA Travelcards (GA)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label data-key="account.edit.password" class="block text-sm font-medium text-red-600 dark:text-white mb-1">New password</label>
+                                <div class="relative">
+                                    <input type="password" id="profileNewPassword" autocomplete="new-password"
+                                        class="w-full px-5 py-2.5 rounded-sm border border-gray-900 dark:border-gray-100 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100" />
+
+                                    <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 text-gray-600 dark:text-gray-300">
+                                        <span id="passwordToggleText">Show</span>
+                                    </button>
+                                </div>
+                                <p data-key="account.edit.passwordinfo" class="text-xs text-gray-900 dark:text-white text-pretty">leave blank if you do not want to change it. <br> At least 12 characters, including uppercase and lowercase letters, numbers, and special characters</p>
+
+                            </div>
+
+                            <div class="flex items-center justify-end space-x-4">
+                                <button data-key="account.edit.cancel" type="button" id="cancelBtn" class="bg-gray-600 hover:bg-gray-700 text-white rounded-sm px-5 py-2.5 text-sm font-medium transition cursor-pointer">
+                                    Cancel
+                                </button>
+                                <button data-key="account.edit.save" type="submit" class="bg-red-600 hover:bg-red-700 text-white rounded-sm px-5 py-2.5 text-sm font-medium transition cursor-pointer">
+                                    Save changes
+                                </button>
+                            </div>
+
+
+                        </form>
+                    </section>
+                </div>
+
+                <section class="order-3 lg:col-span-4 shadow-md bg-white dark:bg-gray-800 rounded-xl p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h4 data-key="account.role.role" class="text-sm font-bold uppercase text-gray-900 dark:text-white">Role</h4>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-red-600 dark:text-red-600 border border-red-600 dark:border-red-600 hover:bg-red-600/20">
+                            <span id="userRole"></span>
+                        </span>
+                    </div>
+                    <hr class="border-red-600 dark:border-red-600">
+                    <div class="flex items-center justify-between">
+                        <h4 data-key="account.role.subscription" class="text-sm font-bold uppercase text-gray-900 dark:text-white">Subscription</h4>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-red-600 dark:text-red-600 border border-red-600 dark:border-red-600 hover:bg-red-600/20">
+                            <span id="userSubscription"></span>
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between pt-4">
+                        <a href="#" data-key="account.role.upgrade" id="upgradeButton" class="w-full text-center bg-red-600 hover:bg-red-700 text-white rounded-sm px-5 py-2.5 text-sm font-medium transition">Upgrade</a>
+                    </div>
+                </section>
+
+                <section class="order-4 lg:col-span-4 shadow-md bg-red-600 rounded-xl p-8 space-y-4">
+                    <h4 data-key="account.danger.title" class="text-sm font-bold uppercase text-white">Danger Zone</h4>
+                    <p data-key="account.danger.description" class="text-sm text-white text-pretty">If you delete your account, all your data will be permanently deleted.</p>
+                    <button data-key="account.danger.delete" id="deleteAccountBtn" class="w-full text-center bg-white hover:bg-gray-200 text-red-600 rounded-sm px-5 py-2.5 text-sm font-medium transition cursor-pointer">
+                        Delete Account
+                    </button>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer id="footer"></footer>
+
+        <!-- cookie banner -->
+        <div id="cookieBanner"></div>
+
+        <!-- Scripts -->
+        <script type="module" src="js/firebase/firebase-auth.js"></script>
+        <script type="module" src="js/firebase/firebase-profile.js"></script>
+        <script type="module">
+            // Wir warten kurz, bis die Seite und die Skripte geladen sind
+            window.addEventListener('DOMContentLoaded', () => {
+                // Ladet die Daten des Nutzers in die Eingabefelder
+                if (typeof window.initProfilePage === 'function') {
+                    window.initProfilePage();
+                }
+
+                // Aktiviert die Speicher-Funktion beim Absenden des Formulars
+                const form = document.getElementById('profileForm');
+                if (form && typeof window.handleProfileSubmit === 'function') {
+                    form.addEventListener('submit', window.handleProfileSubmit);
+                }
+            });
+        </script>
+        <script src="js/translation.js"></script>
+        <script src="js/page-elements.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

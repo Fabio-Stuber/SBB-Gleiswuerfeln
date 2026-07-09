@@ -1,0 +1,15 @@
+{
+    "header": {
+        "title": "Roll the Track Dice",
+        "subtitle": "The Random Train Adventure",
+        "login": "LOGIN",
+        "account": "Edit Account",
+        "logout": "Logout"
+    },
+    "footer": {
+        "copyright": "&copy; <span id=\"copyrightYear\"></span> Fabio Stuber. All rights reserved. <br> Developed for train enthusiasts. Not an official SBB app.",
+        "created_by": "CREATED WITH ❤️ BY <a href=\"https://www.fabio-stuber.com\" class=\"hover:underline transition duration-200\">FABIO STUBER</a>",
+        "impressum": "Imprint",
+        "privacy": "Privacy Policy"
+    }
+}
